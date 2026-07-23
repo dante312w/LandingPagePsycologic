@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karla Silva — Psicóloga | Un espacio para hablar, pensar y encontrar claridad</title>
+<meta name="description" content="Acompañamiento psicológico presencial en Pasto, Nariño, y virtual para toda Colombia. Orientación escolar, resolución de conflictos, duelo y atención a víctimas de violencia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand:#F4F1E9;
+    --ivory:#FBF9F4;
+    --forest:#23392F;
+    --forest-deep:#16241D;
+    --ink:#1B2318;
+    --ochre:#B4823D;
+    --ochre-soft:#D8B27C;
+    --moss:#5C6E52;
+    --line:rgba(27,35,24,0.14);
+    --line-light:rgba(244,241,233,0.22);
+    --shadow:0 20px 60px rgba(22,36,29,0.12);
+    --serif:'Fraunces', serif;
+    --sans:'Work Sans', sans-serif;
+    --maxw:1180px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+
+  body{
+    font-family:var(--sans);
+    background:var(--sand);
+    color:var(--ink);
+    line-height:1.6;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  img{max-width:100%;display:block;}
+  .photo-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-0.01em;}
+
+  .eyebrow{
+    font-family:var(--sans);
+    font-size:12.5px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--ochre);
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:15px;
+    padding:15px 30px;
+    border-radius:100px;
+    border:1.5px solid transparent;
+    cursor:pointer;
+    transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, background .3s ease, color .3s ease, border-color .3s ease;
+    white-space:nowrap;
+  }
+  .btn:focus-visible{outline:2px solid var(--ochre);outline-offset:3px;}
+
+  .btn-primary{
+    background:var(--forest);
+    color:var(--ivory);
+  }
+  .btn-primary:hover{background:var(--ochre);transform:translateY(-2px);box-shadow:var(--shadow);}
+
+  .btn-outline{
+    background:transparent;
+    border-color:var(--ink);
+    color:var(--ink);
+  }
+  .btn-outline:hover{border-color:var(--ochre);color:var(--ochre);transform:translateY(-2px);}
+
+  .btn-light{
+    background:var(--ivory);
+    color:var(--forest);
+  }
+  .btn-light:hover{background:var(--ochre);color:var(--ivory);transform:translateY(-2px);}
+
+  /* ---------- Dialogue line signature ---------- */
+  .dialogue-line{width:100%;display:block;}
+  .dialogue-line path{
+    fill:none;
+    stroke-linecap:round;
+  }
+
+  /* ---------- NAV ---------- */
+  header.site-nav{
+    position:fixed;top:0;left:0;right:0;
+    z-index:100;
+    padding:26px 0;
+    transition:padding .4s cubic-bezier(.2,.8,.2,1), background .4s ease, box-shadow .4s ease;
+  }
+  header.site-nav .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  header.site-nav.scrolled{
+    padding:14px 0;
+    background:rgba(244,241,233,0.88);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    box-shadow:0 1px 0 var(--line);
+  }
+  .brand{
+    font-family:var(--serif);
+    font-size:20px;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .brand .mark{
+    width:34px;height:34px;
+    border-radius:50%;
+    background:var(--forest);
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .brand .mark svg{width:20px;height:20px;}
+
+  nav.links{display:flex;gap:36px;align-items:center;}
+  nav.links a.nav-link{
+    font-size:14.5px;
+    font-weight:500;
+    position:relative;
+    padding:4px 0;
+  }
+  nav.links a.nav-link::after{
+    content:'';position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--ochre);
+    transition:width .3s ease;
+  }
+  nav.links a.nav-link:hover::after{width:100%;}
+
+  .nav-cta{display:flex;align-items:center;gap:22px;}
+  .nav-cta .btn{padding:12px 24px;font-size:14px;}
+
+  .menu-toggle{
+    display:none;
+    background:none;border:none;cursor:pointer;
+    width:40px;height:40px;
+    align-items:center;justify-content:center;
+  }
+  .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after{
+    content:'';display:block;width:22px;height:1.5px;background:var(--ink);
+    position:relative;transition:transform .3s ease, opacity .3s ease;
+  }
+  .menu-toggle span::before{position:absolute;top:-7px;}
+  .menu-toggle span::after{position:absolute;top:7px;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100svh;
+    display:flex;
+    align-items:center;
+    padding:130px 0 80px;
+    position:relative;
+    background:
+      radial-gradient(ellipse 60% 50% at 85% 15%, rgba(180,130,61,0.10), transparent),
+      var(--sand);
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.05fr 0.85fr;
+    gap:64px;
+    align-items:center;
+  }
+  .hero-copy .eyebrow{margin-bottom:22px;display:block;}
+  .hero-copy h1{
+    font-size:clamp(38px, 5vw, 60px);
+    color:var(--forest-deep);
+    margin-bottom:26px;
+  }
+  .hero-copy .sub{
+    font-size:18px;
+    color:var(--moss);
+    max-width:480px;
+    margin-bottom:32px;
+    font-weight:400;
+  }
+  .credential-strip{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 22px;
+    margin-bottom:36px;
+    font-size:13.5px;
+    color:var(--forest);
+    font-weight:500;
+  }
+  .credential-strip span{display:flex;align-items:center;gap:7px;}
+  .credential-strip span::before{
+    content:'';width:6px;height:6px;border-radius:50%;background:var(--ochre);flex-shrink:0;
+  }
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+
+  .hero-visual{
+    position:relative;
+  }
+  .photo-frame{
+    position:relative;
+    aspect-ratio:4/5;
+    border-radius:6px;
+    overflow:hidden;
+    background:
+      linear-gradient(150deg, #2c4436 0%, #23392F 45%, #1b2b21 100%);
+    box-shadow:var(--shadow);
+  }
+  .photo-frame .texture{
+    position:absolute;inset:0;
+    background-image:
+      repeating-linear-gradient(115deg, rgba(244,241,233,0.05) 0px, rgba(244,241,233,0.05) 1px, transparent 1px, transparent 14px);
+    mix-blend-mode:overlay;
+  }
+  .photo-frame .placeholder-copy{
+    position:absolute;inset:0;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:40px;color:var(--ivory);
+  }
+  .photo-frame .placeholder-copy svg{width:44px;height:44px;margin-bottom:18px;opacity:0.85;}
+  .photo-frame .placeholder-copy p.label{font-size:13px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:var(--ochre-soft);margin-bottom:8px;}
+  .photo-frame .placeholder-copy p.desc{font-size:14px;color:rgba(251,249,244,0.7);max-width:230px;line-height:1.5;}
+  .contact-sheet-tag{
+    position:absolute;top:16px;right:16px;
+    background:rgba(27,35,24,0.55);
+    color:var(--sand);
+    font-size:10.5px;
+    letter-spacing:0.06em;
+    padding:6px 10px;
+    border-radius:4px;
+    border:1px solid rgba(244,241,233,0.25);
+    font-weight:500;
+    z-index:2;
+    text-transform:uppercase;
+  }
+  .hero-visual::after{
+    content:'';
+    position:absolute;
+    bottom:-22px;left:-22px;
+    width:120px;height:120px;
+    border:1.5px solid var(--ochre);
+    border-radius:50%;
+    opacity:0.4;
+    z-index:-1;
+  }
+
+  .scroll-cue{
+    position:absolute;bottom:36px;left:32px;
+    display:flex;align-items:center;gap:10px;
+    font-size:12.5px;color:var(--moss);
+    font-weight:500;
+  }
+  .scroll-cue .dot{
+    width:8px;height:8px;border-radius:50%;background:var(--ochre);
+    animation:pulse 2.2s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.6);opacity:0.4;}}
+
+  /* ---------- Section generic ---------- */
+  section{padding:120px 0;position:relative;}
+  .section-head{max-width:640px;margin-bottom:64px;}
+  .section-head .eyebrow{display:block;margin-bottom:16px;}
+  .section-head h2{font-size:clamp(30px,4vw,44px);color:var(--forest-deep);}
+  .section-head p.lead{font-size:17px;color:var(--moss);margin-top:18px;max-width:520px;}
+
+  .reveal{
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1);
+  }
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+
+  /* line divider between sections */
+  .section-divider{padding:70px 0 0;}
+  .section-divider .wrap{padding:0 32px;}
+
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--ivory);}
+  .about .wrap{display:grid;grid-template-columns:0.8fr 1.2fr;gap:70px;align-items:start;}
+  .about-photo .photo-frame{aspect-ratio:3/4;background:linear-gradient(160deg,#e7ddc4 0%, #B4823D 130%);}
+  .about-photo .photo-frame .placeholder-copy{color:var(--forest-deep);}
+  .about-photo .photo-frame .placeholder-copy p.desc{color:rgba(27,35,24,0.6);}
+  .about-photo .photo-frame .placeholder-copy p.label{color:var(--forest);}
+  .about-photo .contact-sheet-tag{background:rgba(244,241,233,0.55);color:var(--ink);border-color:rgba(27,35,24,0.2);}
+
+  .about-body blockquote{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:24px;
+    color:var(--forest);
+    line-height:1.45;
+    border-left:2px solid var(--ochre);
+    padding-left:26px;
+    margin:26px 0 34px;
+  }
+  .about-body p{font-size:16.5px;color:var(--ink);margin-bottom:18px;max-width:560px;}
+  .about-body p.name-sign{
+    font-family:var(--serif);font-size:18px;color:var(--forest);margin-top:8px;
+  }
+
+  .credentials-list{
+    margin-top:38px;
+    border-top:1px solid var(--line);
+  }
+  .credentials-list .cred-row{
+    display:grid;grid-template-columns:170px 1fr;
+    gap:20px;
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+    font-size:14.5px;
+  }
+  .credentials-list .cred-row .cred-label{
+    font-size:12px;letter-spacing:0.09em;text-transform:uppercase;color:var(--ochre);font-weight:600;padding-top:2px;
+  }
+  .credentials-list .cred-row .cred-value{color:var(--ink);}
+  .credentials-list .cred-row .cred-value strong{font-weight:600;color:var(--forest-deep);}
+
+  /* ---------- SPECIALTIES (editorial list) ---------- */
+  .specialties{background:var(--sand);}
+  .spec-entry{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:44px;
+    padding:38px 0;
+    border-top:1px solid var(--line);
+    align-items:start;
+    transition:background .35s ease;
+  }
+  .spec-entry:last-child{border-bottom:1px solid var(--line);}
+  .spec-entry:hover{background:rgba(180,130,61,0.05);}
+  .spec-tag{
+    font-family:var(--serif);
+    font-size:15px;
+    font-style:italic;
+    color:var(--ochre);
+    padding-top:4px;
+  }
+  .spec-content h3{font-size:24px;color:var(--forest-deep);margin-bottom:10px;font-weight:500;}
+  .spec-content p{font-size:15.5px;color:var(--moss);max-width:640px;}
+  .spec-entry.align-right .spec-content{margin-left:auto;}
+
+  /* ---------- HOW IT WORKS ---------- */
+  .how{background:var(--forest);color:var(--ivory);}
+  .how .section-head .eyebrow{color:var(--ochre-soft);}
+  .how .section-head h2{color:var(--ivory);}
+  .how .section-head p.lead{color:rgba(251,249,244,0.72);}
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:2px;
+    background:rgba(251,249,244,0.14);
+    border-radius:14px;
+    overflow:hidden;
+  }
+  .step{
+    background:var(--forest);
+    padding:44px 34px;
+    position:relative;
+  }
+  .step .step-num{
+    font-family:var(--serif);
+    font-size:46px;
+    color:rgba(251,249,244,0.18);
+    margin-bottom:22px;
+    line-height:1;
+  }
+  .step h3{font-size:20px;color:var(--ivory);margin-bottom:12px;font-weight:500;}
+  .step p{font-size:14.5px;color:rgba(251,249,244,0.68);}
+
+  /* ---------- MODALITY ---------- */
+  .modality .wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  .mode-card{
+    background:var(--ivory);
+    border-radius:14px;
+    padding:40px;
+    border:1px solid var(--line);
+  }
+  .mode-card .mode-icon{
+    width:46px;height:46px;border-radius:50%;background:rgba(180,130,61,0.14);
+    display:flex;align-items:center;justify-content:center;margin-bottom:22px;
+  }
+  .mode-card .mode-icon svg{width:22px;height:22px;color:var(--ochre);}
+  .mode-card h3{font-size:22px;color:var(--forest-deep);margin-bottom:12px;font-weight:500;}
+  .mode-card p{font-size:15px;color:var(--moss);margin-bottom:14px;}
+  .mode-card ul{list-style:none;font-size:14.5px;color:var(--ink);}
+  .mode-card ul li{padding:8px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;}
+  .mode-card .confidential-note{
+    margin-top:18px;font-size:13px;color:var(--moss);font-style:italic;
+    padding-top:14px;border-top:1px dashed var(--line);
+  }
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testimonials{background:var(--sand);}
+  .test-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:26px;
+  }
+  .test-card{
+    background:var(--ivory);
+    border-radius:12px;
+    padding:32px;
+    position:relative;
+    border:1px dashed rgba(180,130,61,0.45);
+  }
+  .test-card .placeholder-flag{
+    display:inline-block;
+    font-size:10.5px;
+    letter-spacing:0.07em;
+    text-transform:uppercase;
+    color:var(--ochre);
+    font-weight:700;
+    background:rgba(180,130,61,0.12);
+    padding:5px 10px;
+    border-radius:100px;
+    margin-bottom:18px;
+  }
+  .test-card p.quote{font-size:15.5px;color:var(--ink);line-height:1.6;margin-bottom:20px;font-style:italic;font-family:var(--serif);}
+  .test-card .who{display:flex;align-items:center;gap:12px;}
+  .test-card .who .avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,#B4823D,#23392F);flex-shrink:0;}
+  .test-card .who .meta{font-size:13px;color:var(--moss);}
+  .test-card .who .meta strong{display:block;color:var(--forest-deep);font-size:14px;font-weight:600;}
+
+  /* ---------- FAQ ---------- */
+  .faq-list{max-width:760px;}
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-question{
+    width:100%;
+    text-align:left;
+    background:none;border:none;cursor:pointer;
+    padding:26px 0;
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+    font-family:var(--serif);
+    font-size:19px;
+    color:var(--forest-deep);
+  }
+  .faq-question:focus-visible{outline:2px solid var(--ochre);outline-offset:4px;}
+  .faq-icon{
+    flex-shrink:0;width:26px;height:26px;position:relative;
+  }
+  .faq-icon::before, .faq-icon::after{
+    content:'';position:absolute;top:50%;left:50%;
+    background:var(--ochre);
+    transform:translate(-50%,-50%);
+    transition:transform .35s ease;
+  }
+  .faq-icon::before{width:16px;height:1.5px;}
+  .faq-icon::after{width:1.5px;height:16px;}
+  .faq-item.open .faq-icon::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0;}
+  .faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .45s cubic-bezier(.2,.8,.2,1);
+  }
+  .faq-answer .inner{padding:0 0 26px;font-size:15.5px;color:var(--moss);max-width:640px;}
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta{
+    background:var(--forest-deep);
+    color:var(--ivory);
+    border-radius:24px;
+    margin:0 32px;
+    padding:70px 60px;
+    position:relative;
+    overflow:hidden;
+  }
+  .final-cta .wrap{max-width:100%;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+  .final-cta .eyebrow{color:var(--ochre-soft);}
+  .final-cta h2{font-size:clamp(28px,3.6vw,38px);color:var(--ivory);margin:14px 0 18px;}
+  .final-cta p.lead{color:rgba(251,249,244,0.72);font-size:16px;max-width:420px;margin-bottom:28px;}
+
+  .contact-form{display:flex;flex-direction:column;gap:16px;}
+  .contact-form label{font-size:12.5px;letter-spacing:0.05em;text-transform:uppercase;color:rgba(251,249,244,0.6);margin-bottom:6px;display:block;font-weight:600;}
+  .contact-form input, .contact-form select, .contact-form textarea{
+    width:100%;
+    background:rgba(251,249,244,0.06);
+    border:1px solid rgba(251,249,244,0.22);
+    border-radius:8px;
+    padding:13px 16px;
+    color:var(--ivory);
+    font-family:var(--sans);
+    font-size:14.5px;
+    transition:border-color .25s ease, background .25s ease;
+  }
+  .contact-form input::placeholder, .contact-form textarea::placeholder{color:rgba(251,249,244,0.35);}
+  .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus{
+    outline:none;border-color:var(--ochre);background:rgba(251,249,244,0.1);
+  }
+  .contact-form select{color-scheme:dark;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .form-status{font-size:13.5px;color:var(--ochre-soft);min-height:20px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--forest);color:rgba(251,249,244,0.75);padding:70px 0 34px;}
+  footer .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:50px;margin-bottom:50px;}
+  footer h4{font-family:var(--serif);color:var(--ivory);font-size:18px;margin-bottom:16px;font-weight:500;}
+  footer p{font-size:14px;line-height:1.7;}
+  footer ul{list-style:none;}
+  footer ul li{margin-bottom:10px;font-size:14px;}
+  footer ul li a:hover{color:var(--ochre-soft);}
+  .crisis-note{
+    background:rgba(251,249,244,0.06);
+    border:1px solid rgba(251,249,244,0.15);
+    border-radius:10px;
+    padding:20px 22px;
+    font-size:13.5px;
+    line-height:1.7;
+    margin-bottom:40px;
+  }
+  .crisis-note strong{color:var(--ivory);}
+  .footer-bottom{
+    border-top:1px solid rgba(251,249,244,0.14);
+    padding-top:26px;
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:13px;color:rgba(251,249,244,0.5);
+    flex-wrap:wrap;gap:12px;
+  }
+
+  /* ---------- Floating WhatsApp ---------- */
+  .float-wa{
+    position:fixed;bottom:26px;right:26px;
+    width:60px;height:60px;
+    border-radius:50%;
+    background:var(--forest);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 12px 30px rgba(22,36,29,0.35);
+    z-index:90;
+    transition:transform .3s ease, background .3s ease, opacity .4s ease;
+    opacity:0;pointer-events:none;
+    transform:scale(0.8);
+  }
+  .float-wa.show{opacity:1;pointer-events:auto;transform:scale(1);}
+  .float-wa:hover{background:var(--ochre);transform:scale(1.08);}
+  .float-wa svg{width:28px;height:28px;color:var(--ivory);}
+
+  /* ---------- Mobile menu ---------- */
+  .mobile-panel{
+    position:fixed;inset:0;
+    background:var(--forest);
+    z-index:99;
+    display:flex;flex-direction:column;
+    align-items:flex-start;justify-content:center;
+    gap:28px;
+    padding:40px;
+    transform:translateY(-100%);
+    transition:transform .45s cubic-bezier(.2,.8,.2,1);
+  }
+  .mobile-panel.open{transform:translateY(0);}
+  .mobile-panel a{font-family:var(--serif);font-size:30px;color:var(--ivory);}
+  .mobile-panel .btn{margin-top:10px;}
+  .mobile-close{
+    position:absolute;top:26px;right:26px;
+    background:none;border:none;color:var(--ivory);font-size:28px;cursor:pointer;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 980px){
+    nav.links{display:none;}
+    .menu-toggle{display:flex;}
+    .hero .wrap{grid-template-columns:1fr;}
+    .hero-visual{order:-1;max-width:340px;margin:0 auto;}
+    .scroll-cue{display:none;}
+    .about .wrap{grid-template-columns:1fr;}
+    .about-photo{max-width:320px;}
+    .steps{grid-template-columns:1fr;}
+    .modality .wrap{grid-template-columns:1fr;}
+    .test-grid{grid-template-columns:1fr;}
+    .final-cta{margin:0 16px;padding:50px 28px;}
+    .final-cta .wrap{grid-template-columns:1fr;gap:36px;}
+    footer .footer-grid{grid-template-columns:1fr;gap:34px;}
+    .form-row{grid-template-columns:1fr;}
+  }
+  @media (max-width: 640px){
+    .wrap{padding:0 20px;}
+    section{padding:80px 0;}
+    .spec-entry{grid-template-columns:1fr;gap:14px;}
+    .credentials-list .cred-row{grid-template-columns:1fr;gap:6px;}
+    .hero{padding:120px 0 60px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="site-nav" id="siteNav">
+  <div class="wrap">
+    <a href="#top" class="brand">
+      <span class="mark">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M2 12C5 6 9 6 12 12C15 18 19 18 22 12" stroke="#F4F1E9" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </span>
+      Karla Silva
+    </a>
+    <nav class="links">
+      <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+      <a class="nav-link" href="#especialidades">Especialidades</a>
+      <a class="nav-link" href="#como-funciona">Cómo funciona</a>
+      <a class="nav-link" href="#preguntas">Preguntas</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://wa.me/573104379935?text=Hola%20Karla%2C%20quisiera%20agendar%20una%20primera%20sesi%C3%B3n" target="_blank" rel="noopener">Agendar sesión</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <button class="mobile-close" id="mobileClose" aria-label="Cerrar menú">×</button>
+  <a href="#sobre-mi">Sobre mí</a>
+  <a href="#especialidades">Especialidades</a>
+  <a href="#como-funciona">Cómo funciona</a>
+  <a href="#preguntas">Preguntas</a>
+  <a class="btn btn-light" href="https://wa.me/573104379935?text=Hola%20Karla%2C%20quisiera%20agendar%20una%20primera%20sesi%C3%B3n" target="_blank" rel="noopener">Agendar sesión</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Psicología clínica y educativa · Pasto y toda Colombia</span>
+      <h1>Un espacio para hablar, pensar y encontrar claridad.</h1>
+      <p class="sub">A través del diálogo, sin juicios. Acompañamiento psicológico presencial en Pasto, Nariño, y virtual para toda Colombia.</p>
+
+      <div class="credential-strip">
+        <span>COLPSIC No. 270975</span>
+        <span>Universidad de Nariño, 2023</span>
+        <span>Orientadora escolar, Instituto Champagnat</span>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/573104379935?text=Hola%20Karla%2C%20quisiera%20agendar%20una%20primera%20sesi%C3%B3n" target="_blank" rel="noopener">
+          Agendar sesión por WhatsApp
+        </a>
+        <a class="btn btn-outline" href="#sobre-mi">Conocer a Karla</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="photo-frame">
+        <img src="images/hero-karla.jpeg" alt="Karla Silva psicóloga">
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue"><span class="dot"></span> Desliza para conocer más</div>
+</section>
+
+<!-- Dialogue line divider -->
+<div class="section-divider">
+  <div class="wrap">
+    <svg class="dialogue-line" viewBox="0 0 1180 60" preserveAspectRatio="none">
+      <path d="M0 30 C 100 5, 200 55, 300 30 S 500 5, 600 30 S 800 55, 900 30 S 1080 5, 1180 30" stroke="#B4823D" stroke-width="1.4" opacity="0.55"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ============ SOBRE MÍ ============ -->
+<section class="about" id="sobre-mi">
+  <div class="wrap">
+    <div class="about-photo reveal">
+      <div class="photo-frame">
+        <img src="images/sobre-karla.jpeg" alt="Karla Silva en su espacio de trabajo">
+      </div>
+    </div>
+
+    <div class="about-body reveal">
+      <span class="eyebrow">Sobre mí</span>
+      <h2 style="margin-top:16px; font-size:clamp(28px,3.4vw,38px); color:var(--forest-deep);">El diálogo, antes que el diagnóstico.</h2>
+
+      <blockquote>
+        "No creo en llegar con respuestas prefabricadas. Creo en sentarme con alguien, escuchar de verdad, y construir juntos un camino que tenga sentido para su historia."
+      </blockquote>
+
+      <p>Soy psicóloga egresada de la Universidad de Nariño (2023), colegiada ante COLPSIC bajo el número 270975. Mi trabajo empezó en las aulas: fui orientadora escolar en el Instituto Champagnat durante 2025, acompañando a adolescentes y familias en momentos de crisis, decisiones difíciles y conflictos cotidianos.</p>
+
+      <p>Con el tiempo, ese trabajo me llevó a profundizar en dos frentes que rara vez se abordan con la seriedad que merecen: el acompañamiento en procesos de duelo, y la atención a personas afectadas por violencia sexual y conflicto armado. Hoy adelanto una especialización en estos temas, y he sido ponente en espacios como <em>"El diálogo como arma de guerra revolucionaria"</em>, donde defendí una idea que guía toda mi práctica: hablar y ser escuchado, sin juicio, es en sí mismo un acto transformador.</p>
+
+      <p class="name-sign">— Karla Silva</p>
+
+      <div class="credentials-list">
+        <div class="cred-row">
+          <div class="cred-label">Colegiatura</div>
+          <div class="cred-value"><strong>COLPSIC No. 270975</strong> — Colegio Colombiano de Psicólogos</div>
+        </div>
+        <div class="cred-row">
+          <div class="cred-label">Formación</div>
+          <div class="cred-value">Psicóloga, <strong>Universidad de Nariño</strong> (2023)</div>
+        </div>
+        <div class="cred-row">
+          <div class="cred-label">Experiencia</div>
+          <div class="cred-value">Orientadora escolar, <strong>Instituto Champagnat</strong> (2025)</div>
+        </div>
+        <div class="cred-row">
+          <div class="cred-label">Certificaciones</div>
+          <div class="cred-value">Manejo de duelo · Atención a víctimas de violencia sexual y conflicto armado · Resolución pacífica de conflictos <em>(especialización en curso)</em></div>
+        </div>
+        <div class="cred-row">
+          <div class="cred-label">Divulgación</div>
+          <div class="cred-value">Ponente, <strong>"El diálogo como arma de guerra revolucionaria"</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESPECIALIDADES ============ -->
+<section class="specialties" id="especialidades">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Áreas de atención</span>
+      <h2>Cinco formas en las que el diálogo ayuda a encontrar claridad.</h2>
+      <p class="lead">No hay un problema "demasiado pequeño" ni uno "demasiado grande". Cada proceso empieza igual: contando lo que está pasando.</p>
+    </div>
+
+    <div class="spec-entry reveal">
+      <div class="spec-tag">Escuela</div>
+      <div class="spec-content">
+        <h3>Orientación escolar y familiar</h3>
+        <p>Acompañamiento a adolescentes y a sus familias en momentos de decisión, bajo rendimiento, ansiedad ante el colegio, conflictos con pares o dificultades de comunicación en casa. Un espacio pensado desde la experiencia real en instituciones educativas.</p>
+      </div>
+    </div>
+
+    <div class="spec-entry align-right reveal">
+      <div class="spec-tag">Conflicto</div>
+      <div class="spec-content">
+        <h3>Resolución de conflictos</h3>
+        <p>Herramientas de diálogo para atravesar conflictos personales, familiares o laborales sin que la comunicación se rompa. Un enfoque práctico, no solo reflexivo, orientado a encontrar salidas concretas.</p>
+      </div>
+    </div>
+
+    <div class="spec-entry reveal">
+      <div class="spec-tag">Duelo</div>
+      <div class="spec-content">
+        <h3>Acompañamiento en duelo</h3>
+        <p>Un espacio para procesar la pérdida de una persona, una relación, una etapa de vida o un proyecto, a tu propio ritmo, con herramientas específicas de manejo de duelo.</p>
+      </div>
+    </div>
+
+    <div class="spec-entry align-right reveal">
+      <div class="spec-tag">Cuidado</div>
+      <div class="spec-content">
+        <h3>Atención a víctimas de violencia</h3>
+        <p>Acompañamiento especializado y con enfoque de cuidado para personas afectadas por violencia sexual o por el conflicto armado, en un espacio confidencial y sin revictimización.</p>
+      </div>
+    </div>
+
+    <div class="spec-entry reveal">
+      <div class="spec-tag">Trabajo</div>
+      <div class="spec-content">
+        <h3>Salud mental laboral</h3>
+        <p>Acompañamiento a personas que atraviesan estrés, burnout, conflictos con jefes o equipos, o momentos de transición profesional que afectan su bienestar general.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CÓMO FUNCIONA ============ -->
+<section class="how" id="como-funciona">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Cómo funciona</span>
+      <h2>Empezar es más simple de lo que crees.</h2>
+      <p class="lead">Tres pasos, sin trámites complicados ni listas de espera largas.</p>
+    </div>
+
+    <div class="steps reveal">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Escribes</h3>
+        <p>Me cuentas brevemente qué te trae por WhatsApp o el formulario de contacto — no necesitas tener claro el diagnóstico, solo lo que sientes que está pasando.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Agendamos</h3>
+        <p>Coordinamos un horario que te sirva, presencial en Pasto o virtual desde donde estés, y te confirmo los detalles antes de la sesión.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Primera sesión</h3>
+        <p>Nos conocemos, hablamos con calma sobre tu situación, y construimos juntas un primer plan de acompañamiento, sin presión ni compromisos de largo plazo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODALIDAD ============ -->
+<section class="modality">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Modalidad y logística</span>
+      <h2>Presencial o virtual — la misma atención.</h2>
+      <p class="lead">Elige la modalidad que mejor se ajuste a tu momento. Ambas mantienen el mismo nivel de confidencialidad y cuidado.</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px;" class="reveal">
+      <div class="mode-card">
+        <div class="mode-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Presencial</h3>
+        <p>Consultas en Pasto, Nariño, en un espacio privado y cómodo, pensado para conversar sin interrupciones.</p>
+        <ul>
+          <li><span>Ciudad</span><span>Pasto, Nariño</span></li>
+          <li><span>Duración</span><span>50 minutos</span></li>
+          <li><span>Horarios</span><span>Lun–Vie, 2:00–7:00 p.m.</span></li>
+        </ul>
+      </div>
+      <div class="mode-card">
+        <div class="mode-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
+        <h3>Virtual</h3>
+        <p>Sesiones por videollamada para toda Colombia, con la misma estructura y profundidad que una sesión presencial.</p>
+        <ul>
+          <li><span>Cobertura</span><span>Todo el país</span></li>
+          <li><span>Duración</span><span>50 minutos</span></li>
+          <li><span>Horarios</span><span>Lun–Vie, 2:00–8:00 p.m.</span></li>
+        </ul>
+        <p class="confidential-note">La sesión virtual conserva la misma confidencialidad que la presencial: se realiza desde un espacio privado, con conexión segura y sin grabación.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Dialogue line divider -->
+<div class="section-divider">
+  <div class="wrap">
+    <svg class="dialogue-line" viewBox="0 0 1180 60" preserveAspectRatio="none">
+      <path d="M0 30 C 120 55, 220 5, 340 30 S 540 55, 660 30 S 860 5, 980 30 S 1100 55, 1180 30" stroke="#5C6E52" stroke-width="1.4" opacity="0.4"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ============ TESTIMONIOS ============ -->
+<section class="testimonials">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Testimonios</span>
+      <h2>Historias de personas que dieron el primer paso.</h2>
+      <p class="lead">Los siguientes son textos de ejemplo, marcados claramente para ser reemplazados por testimonios reales y autorizados por pacientes.</p>
+    </div>
+
+    <div class="test-grid reveal">
+      <div class="test-card">
+        <span class="placeholder-flag">Testimonio de ejemplo</span>
+        <p class="quote">"Llegué sin saber si lo que me pasaba 'ameritaba' terapia. Karla me ayudó a entender que sí valía la pena hablarlo, y eso cambió cómo enfrenté todo lo demás."</p>
+        <div class="who">
+          <div class="avatar"></div>
+          <div class="meta"><strong>Nombre de ejemplo</strong>Sesión virtual · Duelo</div>
+        </div>
+      </div>
+      <div class="test-card">
+        <span class="placeholder-flag">Testimonio de ejemplo</span>
+        <p class="quote">"Como colegio, buscábamos alguien que entendiera de verdad el contexto escolar, no solo la teoría. Karla trajo ambas cosas."</p>
+        <div class="who">
+          <div class="avatar"></div>
+          <div class="meta"><strong>Institución de ejemplo</strong>Orientación escolar</div>
+        </div>
+      </div>
+      <div class="test-card">
+        <span class="placeholder-flag">Testimonio de ejemplo</span>
+        <p class="quote">"Nunca sentí que me juzgara. Eso, más que cualquier técnica, fue lo que me hizo volver semana tras semana."</p>
+        <div class="who">
+          <div class="avatar"></div>
+          <div class="meta"><strong>Nombre de ejemplo</strong>Sesión presencial · Pasto</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="preguntas" style="background:var(--ivory);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2>Antes de escribir, quizás esto te ayude.</h2>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Necesito tener un problema "grave" para venir a terapia?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer"><div class="inner">No. La mayoría de personas que escriben por primera vez no tienen un diagnóstico ni una crisis evidente — tienen algo que les pesa, les confunde o no saben cómo nombrar. Ese es exactamente el punto de partida de una primera sesión.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Cómo funciona la sesión virtual? ¿Es igual de confidencial?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer"><div class="inner">La sesión virtual se realiza por videollamada, con la misma duración y estructura que una presencial. La confidencialidad se mantiene igual: te recomiendo conectarte desde un espacio privado, y por mi parte la sesión no se graba ni se comparte con terceros.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Eres psicóloga titulada? ¿Qué me garantiza eso?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer"><div class="inner">Sí. Soy psicóloga egresada de la Universidad de Nariño (2023) y estoy colegiada ante COLPSIC bajo el número 270975, lo que significa que mi ejercicio profesional está regulado y sujeto al código ético de la profesión en Colombia.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Cuánto dura una sesión y con qué frecuencia se hacen?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer"><div class="inner">Cada sesión dura 50 minutos. La frecuencia se define contigo según tu proceso — habitualmente se empieza con una sesión semanal, y se ajusta con el tiempo.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Qué pasa si no sé qué decir en la primera sesión?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer"><div class="inner">No necesitas prepararte ni tener un guion. La primera sesión está pensada justamente para eso: conocernos, entender qué te trae, y a partir de ahí ir construyendo la conversación juntas.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Atienden adolescentes o solo adultos?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer"><div class="inner">Sí, atiendo adolescentes, generalmente en conjunto con sus familias cuando el caso lo requiere, además de adultos que buscan acompañamiento individual.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section style="padding:60px 0 120px;">
+  <div class="final-cta reveal">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Da el primer paso</span>
+        <h2>Escribe hoy. La primera conversación no compromete a nada más.</h2>
+        <p class="lead">Cuéntame brevemente qué te trae, y te respondo para coordinar tu primera sesión — presencial en Pasto o virtual desde cualquier parte de Colombia.</p>
+        <a class="btn btn-light" href="https://wa.me/573104379935?text=Hola%20Karla%2C%20quisiera%20agendar%20una%20primera%20sesi%C3%B3n" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div>
+            <label for="fname">Nombre</label>
+            <input type="text" id="fname" name="fname" placeholder="Tu nombre" required>
+          </div>
+          <div>
+            <label for="fphone">Teléfono o WhatsApp</label>
+            <input type="tel" id="fphone" name="fphone" placeholder="+57 300 000 0000" required>
+          </div>
+        </div>
+        <div>
+          <label for="femail">Correo electrónico</label>
+          <input type="email" id="femail" name="femail" placeholder="tucorreo@ejemplo.com">
+        </div>
+        <div>
+          <label for="fmode">Modalidad de preferencia</label>
+          <select id="fmode" name="fmode">
+            <option value="presencial">Presencial (Pasto)</option>
+            <option value="virtual">Virtual (toda Colombia)</option>
+            <option value="no-se">Aún no sé</option>
+          </select>
+        </div>
+        <div>
+          <label for="fmsg">¿Qué te trae por aquí?</label>
+          <textarea id="fmsg" name="fmsg" rows="3" placeholder="Cuéntame brevemente tu situación"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:6px;">Enviar mensaje</button>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Karla Silva</h4>
+        <p>Psicóloga clínica y educativa, colegiada ante COLPSIC (No. 270975). Acompañamiento presencial en Pasto, Nariño, y virtual para toda Colombia.</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="https://wa.me/573104379935" target="_blank" rel="noopener">WhatsApp: +57 310 437 9935</a></li>
+          <li><a href="mailto:contacto@karlasilvapsicologa.com">contacto@karlasilvapsicologa.com</a></li>
+          <li>Pasto, Nariño, Colombia</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#especialidades">Especialidades</a></li>
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#preguntas">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="crisis-note">
+      <strong>Si estás en una situación de crisis o riesgo inmediato</strong>, esta página no reemplaza una línea de atención urgente. En Colombia puedes contactar la <strong>Línea 106</strong> (línea de salud mental del Ministerio de Salud), la <strong>Línea 123</strong> para emergencias, o la <strong>Línea 155</strong> de orientación a mujeres víctimas de violencia.
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Karla Silva — Psicóloga. Todos los derechos reservados.</span>
+      <span>COLPSIC No. 270975</span>
+    </div>
+  </div>
+</footer>
+
+<a class="float-wa" id="floatWa" href="https://wa.me/573104379935?text=Hola%20Karla%2C%20quisiera%20agendar%20una%20primera%20sesi%C3%B3n" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.62 1.44 5.15L2 22l5.15-1.55a9.87 9.87 0 0 0 4.89 1.3h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.51 2 12.04 2Zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.13.94.95-3.05-.2-.31a8.2 8.2 0 1 1 15.31-4.13c0 4.55-3.7 8.24-8.24 8.24Zm4.51-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.79.98-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.45-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.12-.15.16-.25.24-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08s.89 2.41 1.01 2.58c.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28Z"/></svg>
+</a>
+
+<script>
+(function(){
+  'use strict';
+
+  // ---- Nav shrink on scroll ----
+  var nav = document.getElementById('siteNav');
+  var floatWa = document.getElementById('floatWa');
+  function onScroll(){
+    if(window.scrollY > 60){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+    if(window.scrollY > 500){ floatWa.classList.add('show'); } else { floatWa.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // ---- Mobile menu ----
+  var toggle = document.getElementById('menuToggle');
+  var panel = document.getElementById('mobilePanel');
+  var closeBtn = document.getElementById('mobileClose');
+  function closePanel(){ panel.classList.remove('open'); }
+  toggle.addEventListener('click', function(){ panel.classList.add('open'); });
+  closeBtn.addEventListener('click', closePanel);
+  panel.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closePanel); });
+
+  // ---- Scroll reveal ----
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in-view'); });
+  }
+
+  // ---- FAQ accordion ----
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var btn = item.querySelector('.faq-question');
+    var answer = item.querySelector('.faq-answer');
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(openItem){
+        if(openItem !== item){
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-question').setAttribute('aria-expanded','false');
+          openItem.querySelector('.faq-answer').style.maxHeight = null;
+        }
+      });
+      if(isOpen){
+        item.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+        answer.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // ---- Contact form (no backend yet — mailto fallback) ----
+  var form = document.getElementById('contactForm');
+  var status = document.getElementById('formStatus');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = form.fname.value.trim();
+    var phone = form.fphone.value.trim();
+    var email = form.femail.value.trim();
+    var mode = form.fmode.value;
+    var msg = form.fmsg.value.trim();
+
+    if(!name || !phone){
+      status.textContent = 'Por favor completa tu nombre y teléfono.';
+      return;
+    }
+
+    var subject = encodeURIComponent('Solicitud de sesión — ' + name);
+    var body = encodeURIComponent(
+      'Nombre: ' + name + '\n' +
+      'Teléfono: ' + phone + '\n' +
+      'Correo: ' + (email || 'No indicado') + '\n' +
+      'Modalidad: ' + mode + '\n' +
+      'Mensaje: ' + (msg || 'No indicado')
+    );
+
+    // Preparado para conectar a un servicio de email o Calendly más adelante.
+    window.location.href = 'mailto:contacto@karlasilvapsicologa.com?subject=' + subject + '&body=' + body;
+    status.textContent = 'Abriendo tu cliente de correo para enviar el mensaje…';
+  });
+})();
+</script>
+
+</body>
+</html>
